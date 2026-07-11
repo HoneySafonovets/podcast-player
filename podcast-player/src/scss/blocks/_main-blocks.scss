@@ -3,3 +3,33 @@
   display: flex;
   justify-content: center;
 }
+
+.container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid $dark-color;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: $dark-color;
+}
+
+.card-img {
+  max-width: 240px;
+  max-height: 240px;
+  border-radius: 10px;
+}
