@@ -14,12 +14,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h1 class="header__title">
       World of Podcasts!
     </h1>
-  <div class="header__input">
-    <input type="text" placeholder="What are you want?" name="search" autocomplete="disabled" class="header__search" >
-    <button class="header__icon">
-      <img src="./assets/Krestiksvgpng.ru_.svg" alt="cross" class="header__icon-item">
-    </button>
-  </div>
+    <div class="header__input">
+      <input type="text" placeholder="What are you want?" name="search" autocomplete="disabled" class="header__search" >
+      <button class="header__icon">
+        <img src="./assets/Krestiksvgpng.ru_.svg" alt="cross" class="header__icon-item">
+      </button>
+    </div>
+  </header>
   <main class="main"></main>
 </div>
 `;
