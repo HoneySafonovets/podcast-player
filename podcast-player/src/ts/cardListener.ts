@@ -20,6 +20,11 @@ export default async function cardListener(
       parent.innerHTML = '';
 
       parent.innerHTML = `
+        <header class="header">
+          <h1 class="header__title">
+            World of Podcasts!
+          </h1>
+        </header>
         <div class="podcast-face">
           <div class="main-header-card">
             <img class="main-header-img" src="${data.image}" alt="${data.title}">
@@ -27,6 +32,14 @@ export default async function cardListener(
           </div>
           <div class="podcast-description">
             <h1 class="podcast-description__title">${data.title}</h1>
+            <p class="podcast-description__description">
+              ${data.description}
+            </p>
+            <div class="podcast-description__btn">
+              <img class="podcast-description__play" src="./assets/play__two.png" alt="Play button">
+              <span class="podcast-description__play-title">Play</span>
+            </div>
+            
           </div>
         </div>
         

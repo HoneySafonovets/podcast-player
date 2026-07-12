@@ -1,2 +1,3 @@
 export const DATA_URL: string = 'https://listen-api-test.listennotes.com/api/v2/best_podcasts?sort=recent_published_first&page=1';
 export const EPISODES_URL: string = `https://listen-api-test.listennotes.com/api/v2/podcasts/`;
+export const BASIC_URL = `https://listen-api-test.listennotes.com/api/v2/`;

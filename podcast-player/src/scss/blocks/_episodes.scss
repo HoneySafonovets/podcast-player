@@ -25,3 +25,11 @@
   height: 250px;
   border-radius: 10px;
 }
+
+
+@media (hover: hover) {
+  .episode-main-card:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+}

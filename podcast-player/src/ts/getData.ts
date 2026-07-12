@@ -1,14 +1,18 @@
 import type Data from './Data';
+import { BASIC_URL } from './API_VARS';
 
 export default async function getData(url: string): Promise<Data> {
-  // const url = 'https://listen-api-test.listennotes.com/api/v2/best_podcasts?sort=recent_published_first&page=1';
-  
-  const response = await fetch(url, {
+  try {
+    const response = await fetch(url, {
     method: 'GET',
     headers: { Accept: 'application/json' },
   });
   
   const data: Data = await response.json();
-  
+  console.log(data)
   return data;
+  } catch (error) {
+
+    return getData(`${BASIC_URL}trending_searches`);
+  }
 }
