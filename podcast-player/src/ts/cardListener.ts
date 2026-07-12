@@ -20,11 +20,17 @@ export default async function cardListener(
       parent.innerHTML = '';
 
       parent.innerHTML = `
-        <div class="main-header">
-          <img class="main-header-img" src="${data.image}" alt="${data.title}">
-          <h2 class="main-header-title">${data.title}</h2>
+        <div class="podcast-face">
+          <div class="main-header-card">
+            <img class="main-header-img" src="${data.image}" alt="${data.title}">
+            <h2 class="main-header-title">${data.title}</h2>
+          </div>
+          <div class="podcast-description">
+            <h1 class="podcast-description__title">${data.title}</h1>
+          </div>
         </div>
-        <div class="main-body">
+        
+        <div class="episode-main" id="episodes">
 
         </div>
       `;
@@ -32,13 +38,13 @@ export default async function cardListener(
       // parent?.insertAdjacentHTML('beforeend', card);
       episodes.forEach((item) => {
         let card = `
-          <article class="episode-main" id="${item.id}">
+          <article class="episode-main-card" id="${item.id}">
             <img class="episode-main-img" src="${item.image}" alt="${item.title}">
             <h2 class="episode-main-title">${item.title}</h2>
           </article>
         `
         
-        document.querySelector('.main-body')?.insertAdjacentHTML('beforeend', card);
+        document.querySelector('#episodes')?.insertAdjacentHTML('beforeend', card);
       });
     } else {
       return data;
