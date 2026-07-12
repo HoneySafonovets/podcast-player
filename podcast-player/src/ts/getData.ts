@@ -1,11 +1,11 @@
-import type Data from "./dataInterface";
+import type Data from './Data';
 
-export default async function getData(): Promise<Data> {
-  const url = "https://listen-api-test.listennotes.com/api/v2/best_podcasts?sort=recent_published_first&page=1";
+export default async function getData(url: string): Promise<Data> {
+  // const url = 'https://listen-api-test.listennotes.com/api/v2/best_podcasts?sort=recent_published_first&page=1';
   
   const response = await fetch(url, {
-    method: "GET",
-    headers: { Accept: "application/json" },
+    method: 'GET',
+    headers: { Accept: 'application/json' },
   });
   
   const data: Data = await response.json();

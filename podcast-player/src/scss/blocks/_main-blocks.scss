@@ -48,5 +48,12 @@
 @media (hover: hover) {
   .card:hover {
     cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: $color-dark-x2;
+    transition: all 0.3s ease-in;
+  }
+  .card:not(hover) {
+    box-shadow: none;
+    transition: all 0.3s ease-in;
   }
 }
