@@ -2,8 +2,8 @@
 import type Episode from './Episode';
 import type Episodes from './Episodes';
 import getEpisodes from './getEpisodes';
-import getData from './getData';
-import { EPISODES_URL, DATA_URL } from './API_VARS';
+// import getData from './getData';
+import { EPISODES_URL } from './API_VARS';
 
 export default async function cardListener(
   event: MouseEvent,
