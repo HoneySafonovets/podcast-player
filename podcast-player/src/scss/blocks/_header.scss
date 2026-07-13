@@ -67,3 +67,34 @@
   width: 100%;
   height: 100%;
 }
+
+.header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border-color: 1px;
+  border-radius: 15px;
+  background-color: $btn-color;
+  color: $color-dark-x3;
+  gap: 10px;
+  padding: 10px;
+}
+
+.header__btn-title {
+  font-family: $font-accent;
+  font-size: 32px;  
+}
+
+
+@media (hover: hover) {
+  .header__btn:hover {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+
+  .header__btn {
+    cursor: pointer;
+    transition: all 0.3s ease-in;    
+  }
+}

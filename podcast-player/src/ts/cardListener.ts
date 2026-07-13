@@ -2,7 +2,8 @@
 import type Episode from './Episode';
 import type Episodes from './Episodes';
 import getEpisodes from './getEpisodes';
-import { EPISODES_URL } from './API_VARS';
+import getData from './getData';
+import { EPISODES_URL, DATA_URL } from './API_VARS';
 
 export default async function cardListener(
   event: MouseEvent,
@@ -14,16 +15,14 @@ export default async function cardListener(
   const data: Episodes = await getEpisodes(`${EPISODES_URL}${target.closest('.card')?.id}`);
   const episodes: Array<Episode> =  data.episodes;
 
-  console.log(data);
+  // console.log(data);
   if (target.closest('.card')) {
     if (parent) {
       parent.innerHTML = '';
 
       parent.innerHTML = `
-        <header class="header">
-          <h1 class="header__title">
-            World of Podcasts!
-          </h1>
+        <header class="header__btn">
+          <span class="header__btn-title">Home</span>
         </header>
         <div class="podcast-face">
           <div class="main-header-card">
@@ -59,6 +58,10 @@ export default async function cardListener(
         
         document.querySelector('#episodes')?.insertAdjacentHTML('beforeend', card);
       });
+
+      // document.querySelector('.header__btn-title')?.addEventListener('click', (event) => {
+      //   const data = await getData(DATA_URL);
+      // });
     } else {
       return data;
     }

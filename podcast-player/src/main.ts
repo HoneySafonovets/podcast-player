@@ -29,6 +29,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 
 const container = document.querySelector<HTMLDivElement>('.container');
+const main = document.querySelector<HTMLDivElement>('.main');
 // Get Data
 const data = await getData(DATA_URL);
 
@@ -38,7 +39,7 @@ const data = await getData(DATA_URL);
 
 renderCards(data.podcasts, document.querySelector(`.main`));
 // New content change
-container?.addEventListener('click',  (event) => cardListener(event, container));
+main?.addEventListener('click',  (event) => cardListener(event, container));
 const input = document.querySelector<HTMLInputElement>('.header__search');
 
 input?.addEventListener('keydown', (event: KeyboardEvent) => inputSearch(event, document.querySelector(`.main`), input));

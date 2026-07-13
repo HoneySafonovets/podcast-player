@@ -9,7 +9,7 @@ export default async function getData(url: string): Promise<Data> {
   });
   
   const data: Data = await response.json();
-  console.log(data)
+
   return data;
   } catch (error) {
 
